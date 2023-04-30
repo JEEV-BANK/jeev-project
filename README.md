@@ -1,10 +1,8 @@
 # jeev-project
 
 SEQUENCIA PARA CRIAR O PROJETO
-# Esse comando serve para inicializar nosso projeto
-### npm init
+### npm init -># Esse comando serve para inicializar nosso projeto e cria o nosso package.json, onde tem todas as nossas configuracoes do projeto
 
-COMO RODAR O PROJETO
 Instalar todas as dependencias indicada pelo package.json
 # Esse comando é utilizado para iniciar nosso projeto o pacote de gerenciamento node
 ### npm install 
