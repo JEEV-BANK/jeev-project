@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <form method="post">
+        <div class="container">
+            <div class="card">
+                <h1> Entrar</h1>
+                <div class="label-float">
+                    <input type="text" id="agencia" placeholder="" required>
+                    <label for="usuario">Agência</label>
+                </div>
+                <div class="label-float">
+                    <input type="text" id="conta" placeholder="" required>
+                    <label for="usuario">Conta</label>
+                </div>
+                <div class=" label-float">
+                    <input type="password" maxlength="6" id="senha" placeholder="" required>
+                    <label for="usuario">Senha</label>
+                </div>
+                <div class="justify-center">
+                    <button type="submit" id="logar">Entrar</button>
+                </div>
+                <div class="justify-center">
+                    <hr>
+                </div>
+                
+                <p>Deseja criar uma conta? 
+                    <a href="">Cadastre-se</a>
+                </p>
+            </div>
+        </div>
+    </form>
+    <script src="../../../app.js"></script>
+</body>
+</html>

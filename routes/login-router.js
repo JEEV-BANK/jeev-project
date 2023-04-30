@@ -1,16 +1,13 @@
 const express = require('express');
-const app = express();
-app.use(express.json());
-const db = require("./db");
-const path = require('path');
 const router = express.Router();
 
-router.get('/', function(req,res){
-    res.sendFile(path.join(__dirname+'/index.html'));
+router.get("/", (req, res) =>{
+    res.render("login")
 });
 
 //CRUD
 /*
+
 //trazer tudo
 app.get('/autor', async(req, res) =>{
     const tabela = await db.executeQuery('SELECT * FROM actor');
@@ -44,7 +41,4 @@ app.put('/alterar/:id', async(req,res) =>{
 })
 */
 
-const port = process.env.PORT || 3000;
-app.use('/', router);
-
-app.listen(port,()=>{console.log(`Servidor iniciado em http://localhost:${port}`);})
+module.exports = router;
