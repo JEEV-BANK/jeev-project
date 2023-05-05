@@ -1,30 +1,31 @@
 # jeev-project
 
 SEQUENCIA PARA CRIAR O PROJETO
+
+## npm init
 # Esse comando serve para inicializar nosso projeto
-### npm init
 
-COMO RODAR O PROJETO
 Instalar todas as dependencias indicada pelo package.json
-# Esse comando é utilizado para iniciar nosso projeto o pacote de gerenciamento node
-### npm install 
 
-# A dependencia express é nosso caminho de requisições para processos de CRUD, rotas, URLs e varias outras funcionalidades...
-### npm install express
+## npm install -> Esse comando é utilizado para iniciar nosso projeto o pacote de gerenciamento node
 
-# A dependencia mysql2 é o nosso vinculo;conexão com o banco de dados
-### npm install mysql2
+## npm install express -> A dependencia express é nosso caminho de requisições para processos de CRUD, rotas, URLs e varias outras funcionalidades...
 
-# A dependencia nodemon busca novas alterações de codigo e se houver ele restarta o servidor de forma automatica.
-### npm install nodemon
+## npm install mysql2 -> A dependencia mysql2 é o nosso vinculo;conexão com o banco de dados
 
-# carrega variaveis de ambiente
-### npm install dotenv
+## npm install nodemon -> A dependencia nodemon busca novas alterações de codigo e se houver ele restarta o servidor de forma automatica.
 
-# estruturacao de codigo, detecta erros para vc corrigir e deixar seu codigo mais legivel 
-### npx eslint --init
+## npm install cors -> Eerve para saber qual programa web pode ter acesso a API 
 
-# serve para saber qual programa web pode ter acesso a API 
-### npm install cors 
+## npx eslint --init -> Estruturacao de codigo, detecta erros para vc corrigir e deixar seu codigo mais legivel 
+
+## npm install dotenv -> Carrega variaveis de ambiente
+# Detalhe: sera necessario criar uma arquivo .env que contem as seguintes variaveis:
+MYSQL_HOST = host;
+MYSQL_USER = usuario;
+MYSQL_PASSWORD = senha;
+MYSQL_DB = nome do seu banco;
+MYSQL_PORT = porta do seu mysql;
+
 
 
