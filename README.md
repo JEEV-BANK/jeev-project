@@ -1,6 +1,6 @@
-<h1 align=center> jeev-project</h1>
- 
+
 <img align="left" alt="jpg" src="https://i.imgur.com/VdiqGsc.jpg" width="350" height="300" />
+<h1 align=center> jeev-project</h1>
 <p>O JEEV-BANK é um projeto interdisciplinar para o curso Análise de Desenvolvimento de Sistema(ADS), esse projeto consiste nas matérias do 2 semestre do curso
  - Análise e projetos de sistemas
  - Engenharia de Software
