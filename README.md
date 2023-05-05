@@ -2,11 +2,11 @@
 <img align="left" alt="jpg" src="https://i.imgur.com/VdiqGsc.jpg" width="350" height="300" />
 <h1 align=center> jeev-project</h1>
 <p>O JEEV-BANK é um projeto interdisciplinar para o curso Análise de Desenvolvimento de Sistema(ADS), esse projeto consiste nas matérias do 2 semestre do curso
- - Análise e projetos de sistemas
- - Engenharia de Software
- - Técnicas de programação
- - Banco de dados
- O objetivo final do projeto é entregar uma startup financeira capaz de cadastrar um usuario, logar com o usuario e por fim entrar na pagina principal do site onde poderá seguir com as demais funções como: saques bancários, extratos, adicionar cartão e sua demais funcionalidades, pagamentos e suas formas(pix, boleto...)
+<p> - Análise e projetos de sistemas</p>
+<p> - Engenharia de Software</p>
+<p> - Técnicas de programação</p>
+<p> - Banco de dados</p>
+<p> O objetivo final do projeto é entregar uma startup financeira capaz de cadastrar um usuario, logar com o usuario e por fim entrar na pagina principal do site onde poderá seguir com as demais funções como: saques bancários, extratos, adicionar cartão e sua demais funcionalidades, pagamentos e suas formas(pix, boleto...)
 </p>
  
  ### Contato dos integrantes do grupo
