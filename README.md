@@ -30,7 +30,7 @@
  
  # DataBase
  
- ![MySQL Badge](https://img.shields.io/badge/mysql-white.svg?style=for-the-badge&logo=mysql&logoColor=black)
+ ![MySQL Badge](https://img.shields.io/badge/mysql-00bfff.svg?style=for-the-badge&logo=mysql&logoColor=black)
  
 ### Outros
 
