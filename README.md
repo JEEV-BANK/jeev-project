@@ -16,10 +16,15 @@ Instalar todas as dependencias indicada pelo package.json
 ### npm install mysql2
 
 # A dependencia nodemon busca novas alterações de codigo e se houver ele restarta o servidor de forma automatica.
-### npm inntall nodemon
+### npm install nodemon
 
-# O EJS permite que você crie aplicativos quando você não requer complexidade adicional. Usando parciais e tendo a capacidade de passar facilmente variáveis para suas exibições.
-### npm install ejs --save
+# carrega variaveis de ambiente
+### npm install dotenv
 
-# Ele pega os valores contidos no formulario
-### npm install body-parser 
+# estruturacao de codigo, detecta erros para vc corrigir e deixar seu codigo mais legivel 
+### npx eslint --init
+
+# serve para saber qual programa web pode ter acesso a API 
+### npm install cors 
+
+

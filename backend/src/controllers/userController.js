@@ -1,7 +1,7 @@
 const userModel = require('../models/userModel')
 
-const getAll = async(req, res) => {
-    return res.status(200).json(await userModel.getAll());
+const getAllUsers = async(req, res) => {
+    return res.status(200).json(await userModel.getAllUsers());
 }
 
 const createUser = async(req, res) => {
@@ -18,7 +18,7 @@ const updateUser = async(req, res) => {
 }
 
 module.exports = {
-    getAll, 
+    getAllUsers, 
     createUser,
     deleteUser,
     updateUser

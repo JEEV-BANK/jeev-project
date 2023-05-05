@@ -3,12 +3,12 @@ const db = require('./database');
 //------------------------------------------GET-------------------------------
 
 //trazer tudo
-const getAll = async() => {
+const getAllUsers = async() => {
     return await db.executeQuery('SELECT * FROM tb_usuario');
 };
 
 //trazer por id
-// const getById = async(req) => {
+// const findUserByLogin = async(req) => {
 //     return await db.executeQuery('SELECT * FROM tabela WHERE id = ' + req.params.id);
 // }
 
@@ -49,8 +49,9 @@ const deleteUser = async(id) =>{
 }
 
 module.exports = {
-    getAll,
+    getAllUsers,
     createUser,
     deleteUser,
-    updateUser
+    updateUser,
+    // findUserByLogin
 };
