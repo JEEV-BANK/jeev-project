@@ -10,7 +10,7 @@
 </p>
  
  ### Contato dos integrantes do grupo
- <div style="border:3px >
+ <div style="border:3px" >
   <img src="https://i.imgur.com/U8SBpYQ.jpg" width="100" height="100" />
  </div>
 
