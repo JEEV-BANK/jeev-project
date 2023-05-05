@@ -1,6 +1,6 @@
 <h1 align=center> jeev-project</>
   
-  <img align="right" alt="GIF" src="https://i.imgur.com/VdiqGsc.jpg" width="350" height="300"  border-radius="4px"/>
+  <img align="center" alt="GIF" src="https://i.imgur.com/VdiqGsc.jpg" width="350" height="300" <style> border-radius="4px"</style>/>
 
 SEQUENCIA PARA CRIAR O PROJETO
 
