@@ -10,10 +10,8 @@
 </p>
  
  ### Contato dos integrantes do grupo
- <div style="border:3px" >
-  <img src="https://i.imgur.com/U8SBpYQ.jpg" width="100" height="100" />
- </div>
-
+ 
+ <img src="https://i.imgur.com/U8SBpYQ.jpg" width="50" height="50" />
 
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=link_do_seu_perfil_no_linkedin)](https://www.linkedin.com/in/erick-alan-7bb92b1b4/)
 [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:seu_email)](erickalan068@gmail.com)
