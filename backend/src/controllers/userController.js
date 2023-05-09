@@ -4,6 +4,10 @@ const getAllUsers = async(req, res) => {
     return res.status(200).json(await userModel.getAllUsers());
 }
 
+const findUserByLogin = async(req, res) => {
+    return res.status(200).json(await userModel.findUserByLogin(req))
+}
+
 const createUser = async(req, res) => {
     return res.status(201).json(await userModel.createUser(req.body));
 }
@@ -21,5 +25,6 @@ module.exports = {
     getAllUsers, 
     createUser,
     deleteUser,
-    updateUser
+    updateUser,
+    findUserByLogin
 } 

@@ -7,10 +7,12 @@ const getAllUsers = async() => {
     return await db.executeQuery('SELECT * FROM tb_usuario');
 };
 
-//trazer por id
-// const findUserByLogin = async(req) => {
-//     return await db.executeQuery('SELECT * FROM tabela WHERE id = ' + req.params.id);
-// }
+const findUserByLogin = async(req) => {
+    return await db.executeQuery(
+    `SELECT * FROM tb_conta_bancaria as conta 
+        JOIN tb_usuario usuario ON conta.id_usuario = usuario.id_usuario
+        WHERE conta.nr_agencia =${req.body.agencia} AND conta.nr_conta=${req.body.conta} AND conta.senha= ${req.body.senha}`);
+}
 
 //----------------------------------------POST-----------------------------------
 //inserir
@@ -53,5 +55,5 @@ module.exports = {
     createUser,
     deleteUser,
     updateUser,
-    // findUserByLogin
+    findUserByLogin
 };
