@@ -5,7 +5,7 @@ const getAllUsers = async(req, res) => {
 }
 
 const findUserByLogin = async(req, res) => {
-    return res.status(200).json(await userModel.findUserByLogin(req))
+    return res.status(200).json(await userModel.findUserByLogin(req.body))
 }
 
 const createUser = async(req, res) => {

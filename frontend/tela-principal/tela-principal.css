@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Tirando todos os espaçamentos e margens da pagina e estilisando uma font*/
+* {
+    margin: 0;/*espacamento externo*/
+    padding: 0;/*espacamento interno*/
+    font-family: 'Roboto', sans-serif;
+}
+/*Papel de fundo da pagina, colocando*/
+body {
+    background-image: url('../assets/img/background.jpg');/*imagem pego no imgur(plataforma que armazena imgs)*/
+    background-repeat: no-repeat;/*a imagem não se repete na tela*/
+    background-size: cover;/*pega o tamanho todo do fundo e padroniza para imagem nao ficar distorcida caso minimize a tela*/
+    background-attachment: fixed;/*fixa a imagem tambem na questao de nao distorcer*/
+}
+
+:root {
+    --color-white: #ffff;
+    --color-blue1: linear-gradient(to bottom right, #8be4ff 0%, #006699 100%);;
+    --color-blue2: #00669930;
+    --color-blue3: linear-gradient(to bottom right, #006699 0%, #33ccff 100%);
+    --color-blue4: #00669980;
+    --color-dark1: #272727;
+    --color-dark3: #414141;
+    --color-dark5: #343434;
+
+}
+
+.logo{
+    width: 45px;
+    border-radius: 50px;
+}
+
+.header, 
+.navigation-header{
+    display: flex;/*tudo na mesma linha*/
+    flex-direction: row;/*direcao da linha,exemplo: coluna, linha mesmo...*/
+    align-items: center;
+    
+}
+
+.header {
+    background: var(--color-blue1);
+    box-shadow: 1px 10px 4px 0px var(--color-blue2);
+    height: 3.5em;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.navigation-header{
+    gap: 3em;
+    z-index: 2;
+}
+
+.navigation-header a{
+    text-decoration: none;
+    color: var(--color-whith);
+    transition: 1s;
+    font-weight: bold;
+}
+.active {
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 3px;
+    transition: all .5s ease-in;
+}
+
+.active:hover { /*quando passa o mouse*/
+    background: var(--color-blue3);
+    color: var(--color-white);
+}
+
+.container {
+    display: flex;/*para utilizar flex-box que é a organização espacialmente os elementos da pagina*/
+    justify-content: center;/*centralizar todos nossos componentes dentro dessa tag container*/
+    width: 100%;/*Garante que cubra os 100% de espaçamento*/
+    margin-top: 100px;/*No topo da pagina dar uma espaçamento*/
+    transition: 1s;
+    color: var(--color-white);
+}
+
+.btn-icon-header{
+    background-color: transparent;
+    border: none;
+    color: var(--color-whith);
+    cursor: pointer;
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .btn-icon-header{
+        display: block;
+    }
+    .navigation-header {
+        margin-top: 55px;
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        background-color: var(--color-blue4);
+        height: 100%;
+        width: 30vw;
+        padding: 1em;
+        animation-duration: 1s;/*o sidebar vai aparecer da esquerda para direita durando 1s*/
+        margin-left: -100vw;/*views*/
+    }
+    .navigation-header a{
+        margin-left: 50px;
+    }
+    /*animação é criada mudando gradualmente de um conjunto de estilos CSS para outro*/
+    @keyframes showSidebar {
+        from {margin-left: -100vw;}/*desaparece da visualizacao*/
+        top {margin-left: -10vw;}/*aparece na visualizacao*/
+    }
+    @keyframes closeSidebar {
+        from {margin-left: -10vw;}/*desaparece da visualizacao*/
+        top {margin-left: -100vw;}/*aparece na visualizacao*/
+    }
+}

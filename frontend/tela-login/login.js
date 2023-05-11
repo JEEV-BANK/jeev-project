@@ -1,7 +1,13 @@
 
-const findUserByLogin = async(req) =>{
-    await fetch(`http://localhost:8081/find-conta-bancaria/${req[0]}/${req[1]}/${req[2]}`, {
-        method: 'GET'
+const agencia = document.querySelector("#agencia")
+const conta = document.querySelector("#conta")
+const senha = document.querySelector("#senha")
+
+const findUserByLogin = async(user) =>{
+    await fetch('http://localhost:8081/find-conta-bancaria', {
+        method: 'post',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(user)
     })
     .then((response) => {
         return response.json()
@@ -13,14 +19,11 @@ const findUserByLogin = async(req) =>{
 }
 
 function entrar() {
-    const agencia = document.querySelector("#agencia")
-    const conta = document.querySelector("#conta")
-    const senha = document.querySelector("#senha")
-    const req = [
-        agencia.value,
-        conta.value,
-        senha.value
-    ]
+    const req = {
+        "agencia" : agencia.value,
+        "conta" : conta.value,
+        "senha" : senha.value
+    }
     if(agencia.value && conta.value && senha.value){
         localStorage.clear();
         findUserByLogin(req);
@@ -49,6 +52,7 @@ function validationLogin(dado) {
             localStorage.setItem('sexo', element.sexo);
             localStorage.setItem('vl_poupança', element.vl_poupança);
             localStorage.setItem('vl_saldo', element.vl_saldo);
+            localStorage.setItem('userLogin', true)
             isLogado()
         });
     }
@@ -56,9 +60,9 @@ function validationLogin(dado) {
 
 function isLogado() {
     location.reload;
-    if(localStorage.length > 0) {
-        window.location.pathname = "../frontend/tela-principal/tela-principal.html"
-    }
+    // if(localStorage.userLogin) {
+    //     window.location.pathname = "../frontend/tela-principal/tela-principal.html"
+    // }
 }
 
 isLogado()
