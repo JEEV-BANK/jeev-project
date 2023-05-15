@@ -7,11 +7,14 @@ const getAllUsers = async() => {
     return await db.executeQuery('SELECT * FROM tb_usuario');
 };
 
-const findUserByLogin = async(req) => {
+const findUserByLogin = async(body) => {
     return await db.executeQuery(
     `SELECT * FROM tb_conta_bancaria as conta 
         JOIN tb_usuario usuario ON conta.id_usuario = usuario.id_usuario
-        WHERE conta.nr_agencia =${req.body.agencia} AND conta.nr_conta=${req.body.conta} AND conta.senha= ${req.body.senha}`);
+        WHERE conta.nr_agencia =${body.agencia} AND conta.nr_conta=${body.conta} AND conta.senha= ${body.senha}`);
+}
+const findExtratoByIdContaBancaria = async(id) => {
+    return await db.executeQuery(`SELECT * FROM tb_pagamento WHERE id_conta_bancaria= ${id}`);
 }
 
 //----------------------------------------POST-----------------------------------
@@ -55,5 +58,6 @@ module.exports = {
     createUser,
     deleteUser,
     updateUser,
-    findUserByLogin
+    findUserByLogin,
+    findExtratoByIdContaBancaria
 };
