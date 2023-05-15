@@ -62,9 +62,6 @@ A dependencia nodemon busca novas alterações de codigo e se houver ele restart
 # npm install cors 
 Serve para saber qual programa web pode ter acesso a API 
 
-# npx eslint --init 
-Estruturacao de codigo, detecta erros para vc corrigir e deixar seu codigo mais legivel 
-
 # npm install dotenv 
 Carrega variaveis de ambiente
 
