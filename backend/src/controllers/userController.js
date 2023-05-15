@@ -1,4 +1,4 @@
-const userModel = require('../models/userModel')
+const userModel = require('../banco-de-dados/userRepository')
 
 const getAllUsers = async(req, res) => {
     return res.status(200).json(await userModel.getAllUsers());
@@ -20,11 +20,15 @@ const deleteUser = async(req, res) => {
 const updateUser = async(req, res) => {
     return res.status(200).json(await userModel.updateUser(req))
 }
+const findExtratoByIdContaBancaria = async(req, res) => {
+    return res.status(200).json(await userModel.findExtratoByIdContaBancaria(req.params.idContaBancaria))
+}
 
 module.exports = {
     getAllUsers, 
     createUser,
     deleteUser,
     updateUser,
-    findUserByLogin
+    findUserByLogin,
+    findExtratoByIdContaBancaria
 } 

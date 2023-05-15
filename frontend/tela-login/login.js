@@ -60,9 +60,9 @@ function validationLogin(dado) {
 
 function isLogado() {
     location.reload;
-    // if(localStorage.userLogin) {
-    //     window.location.pathname = "../frontend/tela-principal/tela-principal.html"
-    // }
+    if(localStorage.userLogin) {
+        window.location.pathname = "../frontend/tela-principal/tela-principal.html"
+    }
 }
 
 isLogado()

@@ -13,6 +13,9 @@ const findUserByLogin = async(body) => {
         JOIN tb_usuario usuario ON conta.id_usuario = usuario.id_usuario
         WHERE conta.nr_agencia =${body.agencia} AND conta.nr_conta=${body.conta} AND conta.senha= ${body.senha}`);
 }
+const findExtratoByIdContaBancaria = async(id) => {
+    return await db.executeQuery(`SELECT * FROM tb_pagamento WHERE id_conta_bancaria= ${id}`);
+}
 
 //----------------------------------------POST-----------------------------------
 //inserir
@@ -55,5 +58,6 @@ module.exports = {
     createUser,
     deleteUser,
     updateUser,
-    findUserByLogin
+    findUserByLogin,
+    findExtratoByIdContaBancaria
 };

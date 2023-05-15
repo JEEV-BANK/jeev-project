@@ -8,22 +8,21 @@
 }
 /*Papel de fundo da pagina, colocando*/
 body {
-    background-image: url('../assets/img/background.jpg');/*imagem pego no imgur(plataforma que armazena imgs)*/
+    background-image: url(../assets/img/background.jpg);/*imagem pego no imgur(plataforma que armazena imgs)*/
     background-repeat: no-repeat;/*a imagem não se repete na tela*/
     background-size: cover;/*pega o tamanho todo do fundo e padroniza para imagem nao ficar distorcida caso minimize a tela*/
     background-attachment: fixed;/*fixa a imagem tambem na questao de nao distorcer*/
 }
 
+/* -----------------------------SIDEBAR------------------------------*/
+
 :root {
     --color-white: #ffff;
-    --color-blue1: linear-gradient(to bottom right, #8be4ff 0%, #006699 100%);;
-    --color-blue2: #00669930;
-    --color-blue3: linear-gradient(to bottom right, #006699 0%, #33ccff 100%);
-    --color-blue4: #00669980;
-    --color-dark1: #272727;
-    --color-dark3: #414141;
-    --color-dark5: #343434;
-
+    --color-background-tela: linear-gradient(to bottom right, #8be4ff 0%, #006699 100%);
+    /* --color-background-tela: linear-gradient(black 0%, #65686f 100%); */
+    --color-shadow: #00669930;
+    --color-hover-botao: linear-gradient(to bottom right, #006699 0%, #33ccff 100%);
+    --color-background-sidebar-esquerdo: #00669980;
 }
 
 .logo{
@@ -40,8 +39,8 @@ body {
 }
 
 .header {
-    background: var(--color-blue1);
-    box-shadow: 1px 10px 4px 0px var(--color-blue2);
+    background: var(--color-background-tela);
+    box-shadow: 1px 10px 4px 0px var(--color-shadow);
     height: 3.5em;
     justify-content: space-between;
     padding: 0 10px;
@@ -66,26 +65,30 @@ body {
 }
 
 .active:hover { /*quando passa o mouse*/
-    background: var(--color-blue3);
+    background: var(--color-hover-botao);
     color: var(--color-white);
 }
 
-.container {
-    display: flex;/*para utilizar flex-box que é a organização espacialmente os elementos da pagina*/
-    justify-content: center;/*centralizar todos nossos componentes dentro dessa tag container*/
-    width: 100%;/*Garante que cubra os 100% de espaçamento*/
-    margin-top: 100px;/*No topo da pagina dar uma espaçamento*/
-    transition: 1s;
-    color: var(--color-white);
-}
-
-.btn-icon-header{
+button{
     background-color: transparent;
     border: none;
     color: var(--color-whith);
     cursor: pointer;
     display: none;
+    padding: 10px;
+    transition: all .5s ease-out;
 }
+
+.btn-icon-signout{
+    display: inline;
+}
+
+button:hover { /*quando passa o mouse*/
+    background: linear-gradient(to bottom right, #006699 0%, #33ccff 100%);
+    color: #ffffff;
+    border-radius: 4px;
+}
+
 @media screen and (max-width: 768px) {
     .btn-icon-header{
         display: block;
@@ -95,7 +98,7 @@ body {
         position: absolute;
         flex-direction: column;
         top: 0;
-        background-color: var(--color-blue4);
+        background-color: var(--color-background-sidebar-esquerdo);
         height: 100%;
         width: 30vw;
         padding: 1em;
@@ -115,3 +118,115 @@ body {
         top {margin-left: -100vw;}/*aparece na visualizacao*/
     }
 }
+ /*-------------------------------------Conteudo---------------------------*/
+ 
+.container {
+    justify-content: start;
+    margin-top: 100px;/*No topo da pagina dar uma espaçamento*/
+    margin-left: 10%;
+    margin-right: 10%;
+    transition: 1s;
+    color: var(--color-white);
+}
+ 
+.card {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: -50px;
+}
+.card input {
+    width: 100%;
+    display: inline-block;
+    text-align: end;
+    font-size: 20px;
+    color: var(--color-whith);
+    font-weight: bold;
+    border: 0;
+    background: linear-gradient(to bottom right, #8be4ff 0%, #006699 100%);/*cor: 6 primeiros digitos | opacidade: porcentagem de transparencia*/
+    padding: 35px 20px 35px 20px;/*espaçamento de todos os lados*/
+    border-radius: 3%;/*redondar as bordas pra nao deixar pontudas*/
+    box-shadow: -8px 8px 80px 8px #00669995;/*sombreamento como se fosse um relevo, ordem para por o px direito-baixo-esquerda-cima | cor e opacidade*/
+    transition: all .5s ease-in;
+}
+
+.card input:hover{
+    padding: 50px 20px 50px 20px;
+    border-radius: 3%;
+    background: black;
+}
+
+.card label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 10px;
+    margin-left: 19px;
+    font-size: 25px;
+}
+
+.card-credito {
+    margin-left: 150px;
+}
+
+.card-credito label{
+    margin-left: 17.5em;
+}
+/*---------------------------------------------opcao de entrada-----------------------*/
+.btn-icon-transferencia,
+.btn-icon-boleto,
+.btn-icon-cartao,
+.btn-icon-pix,
+.btn-icon-ted-doc{
+    display: inline;
+    padding: 10px 40px;
+}
+.opcao-pagamento {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    height: 3.5em;
+    justify-content: space-between;
+}
+
+.btn-icon-ted-doc{
+    padding: 20px;
+    font-size: 20px;
+}
+
+/*------------------------------------------------------------------Extrato--------------------------------------------------*/
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 60px;
+}
+
+th, td {
+    padding: 10px 15px;
+    font-size: 20px;
+    border: 1px solid var(--color-white);
+}
+.bloco {
+    float: left;
+    margin: 5px;
+    background-size: calc(100% - 10px);
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color-white);
+  }
+.draggable {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    transition: transform 0.3s linear z-index 0.3 linear;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.dragging {
+    transform: scale(1.1);
+    z-index: 999;
+}
+
