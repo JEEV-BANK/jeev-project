@@ -6,7 +6,7 @@ const userValidation = require('./validations/userValidation');
 
 //rotas
 router.post('/find-conta-bancaria', userController.findUserByLogin);
-router.post('/cadastrar', userValidation.validateBody, userController.createUser);
+router.post('/cadastrar', userController.createUser);
 router.delete('/delete/:id', userController.deleteUser);
 router.put('/alterar/:id', userValidation.validateBody, userController.updateUser);
 router.get('/find-extrato/:idContaBancaria', userController.findExtratoByIdContaBancaria);

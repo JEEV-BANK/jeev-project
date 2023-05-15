@@ -9,7 +9,8 @@ const findUserByLogin = async(req, res) => {
 }
 
 const createUser = async(req, res) => {
-    return res.status(201).json(await userModel.createUser(req.body));
+    console.log("body: ",req.body)
+    //return res.status(201).json(await userModel.createUser(req.body));
 }
 
 const deleteUser = async(req, res) => {
