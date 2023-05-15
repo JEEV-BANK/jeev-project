@@ -7,6 +7,9 @@ const findUserByLogin = async(req) =>{
     return await response.json();
 }
 
+const card = document.querySelector('.container');
+
+
 function entrar() {
     let agencia = document.querySelector("#agencia")
     let agenciaLabel = document.querySelector("#agenciaLabel")
@@ -24,3 +27,4 @@ function entrar() {
     console.log(findUserByLogin(req));
 
 };
+

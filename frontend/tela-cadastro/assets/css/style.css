@@ -13,7 +13,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #0c0ce94c;
+    background: linear-gradient(black 0%, #65686f 100%);
 }
 
 .container {
@@ -28,7 +28,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #65686f;
+    background: linear-gradient(#8be4ff  0%, #006699 100%);
     padding: 1rem;
 }
 
@@ -42,7 +42,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: hsl(193, 33%, 47%);
+    background: linear-gradient( #8be4ff  0%, #006699 100%);
     padding: 2rem;
 }
 
