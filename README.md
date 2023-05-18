@@ -10,7 +10,7 @@
 </p>
  
  ### Contato dos integrantes do grupo
- * [Emily Vitoria](https://www.linkedin.com/in/emily-vitoria-4b4b582oa/)
+ * [Emily Vitoria](https://www.linkedin.com/in/emily-vitoria-4b4b5820a/)
  * [Jonnathan Costa](https://www.linkedin.com/in/jonnathan-costa-362956198/)
  * [Erick Alan](https://www.linkedin.com/in/erick-alan-7bb92b1b4/)
  * [Vinicius Peres](https://www.linkedin.com/in/viniciusperesoliveira/)
