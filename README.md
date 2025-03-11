@@ -6,7 +6,7 @@
 <p> - Engenharia de Software</p> 
 <p> - Técnicas de programação</p>
 <p> - Banco de dados</p>
-<p> O objetivo final do projeto é entregar uma startup financeira capaz de cadastrar um usuario, logar com o usuario e por fim entrar na pagina principal do site onde poderá seguir com as demais funções como: saques bancários, extratos, adicionar cartão e sua demais funcionalidades, pagamentos e suas formas(pix, boleto...)
+<p> O objetivo final do projeto é entregar uma startup financeira capaz de cadastrar um usuario, logar com o usuario e por fim entrar na pagina principal do site onde poderá seguir com as demais funções como: saques bancários, extratos, adicionar cartão e suas demais funcionalidades, pagamentos e suas formas(pix, boleto...)
 </p>
  
  ### Contato dos integrantes do grupo
